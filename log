@@ -2,3 +2,14 @@ Thu 16 May 2024 08:06:25 PM UTC:
  tests:  0|5
 total_score: 0/70
 a0e1e62
+Thu 16 May 2024 08:25:36 PM UTC: 
+ sudoku.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:59:26: error: statement with no effect [-Werror=unused-value]
+   59 |                n->sudo[i][k];
+      |                ~~~~~~~~~~^~~
+cc1: all warnings being treated as errors
+Compilation failed
+2c025a2
