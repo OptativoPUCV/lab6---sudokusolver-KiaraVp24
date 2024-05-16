@@ -75,3 +75,9 @@ sudoku.c:91:25: error: invalid use of incomplete typedef ‘List’
 cc1: all warnings being treated as errors
 Compilation failed
 aa20bc7
+Thu 16 May 2024 08:41:00 PM UTC: 
+ sudoku.c | 22 +++++++++-------------
+ 1 file changed, 9 insertions(+), 13 deletions(-)
+ tests:  4|3
+total_score: 30/70
+1e57746
