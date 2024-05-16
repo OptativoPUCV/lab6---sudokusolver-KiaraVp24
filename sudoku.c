@@ -103,7 +103,6 @@ Node* DFS(Node* initial, int* cont){
          adjNode = next(adj);
       }
       (*cont)++;
-      freeList(adj);
    }
    return NULL;
 }
