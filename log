@@ -131,3 +131,15 @@ sudoku.c:106:7: error: implicit declaration of function ‘freeList’; did you 
 cc1: all warnings being treated as errors
 Compilation failed
 c3c05b7
+Thu 16 May 2024 08:57:47 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:106:7: error: implicit declaration of function ‘freeList’; did you mean ‘createList’? [-Werror=implicit-function-declaration]
+  106 |       freeList(adj);
+      |       ^~~~~~~~
+      |       createList
+cc1: all warnings being treated as errors
+Compilation failed
+1bafba1
