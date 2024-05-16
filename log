@@ -93,3 +93,26 @@ Thu 16 May 2024 08:48:02 PM UTC:
  tests:  4|3
 total_score: 30/70
 502ea48
+Thu 16 May 2024 08:50:21 PM UTC: 
+ sudoku.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:100:29: error: ‘Node’ has no member named ‘i’
+  100 |             if (!visited[aux->i][aux->j]) { // Verificar si el nodo no ha sido visitado
+      |                             ^~
+sudoku.c:100:37: error: ‘Node’ has no member named ‘j’
+  100 |             if (!visited[aux->i][aux->j]) { // Verificar si el nodo no ha sido visitado
+      |                                     ^~
+sudoku.c:102:28: error: ‘Node’ has no member named ‘i’
+  102 |                 visited[aux->i][aux->j] = 1; // Marcar el nodo como visitado
+      |                            ^~
+sudoku.c:102:36: error: ‘Node’ has no member named ‘j’
+  102 |                 visited[aux->i][aux->j] = 1; // Marcar el nodo como visitado
+      |                                    ^~
+sudoku.c:88:9: error: variable ‘visited’ set but not used [-Werror=unused-but-set-variable]
+   88 |     int visited[9][9] = {0}; // Inicializar matriz de visitados
+      |         ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b0106d5
