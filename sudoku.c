@@ -102,9 +102,12 @@ Node* DFS(Node* initial, int* cont){
          push(s, adjNode);
          adjNode = next(adj);
       }
+
+      free(adj); 
       (*cont)++;
    }
-   return NULL;
+
+   return NULL; 
 }
 
 /*
