@@ -60,3 +60,18 @@ sudoku.c:91:17: error: void value not ignored as it ought to be
       |                 ^~~
 Compilation failed
 6c224a9
+Thu 16 May 2024 08:37:12 PM UTC: 
+ sudoku.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:91:17: error: implicit declaration of function ‘get’; did you mean ‘getw’? [-Werror=implicit-function-declaration]
+   91 |       Node* n = get(s, s->size - 1);
+      |                 ^~~
+      |                 getw
+sudoku.c:91:25: error: invalid use of incomplete typedef ‘List’
+   91 |       Node* n = get(s, s->size - 1);
+      |                         ^~
+cc1: all warnings being treated as errors
+Compilation failed
+aa20bc7
