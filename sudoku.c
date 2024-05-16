@@ -95,8 +95,14 @@ int is_final(Node* n){
          }
       }
    }
-   return is_valid(n);
+   if (is_valid(n)) {
+       return 1;
+   } 
+   else {
+       return 0;
+   }
 }
+
 
 Node* DFS(Node* initial, int* cont){
    Stack* s = createStack();
