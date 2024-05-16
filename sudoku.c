@@ -99,6 +99,10 @@ Node* DFS(Node* initial, int* cont){
          aux = next(list);
       }
       free(n);
+
+      if (is_empty(s)) {
+         return NULL;
+      }
    }
    return NULL;
 }
