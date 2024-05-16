@@ -84,27 +84,28 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
-    Stack* s = createStack();
-    int visited[9][9] = {0}; // Inicializar matriz de visitados
-    push(s, initial);
-    while(!is_empty(s)) {
-        (*cont)++; // Incrementar el contador de iteraciones
-        Node* n = top(s);
-        pop(s);
-        if (is_final(n)) {
-            return n;
-        }
-        List* list = get_adj_nodes(n);
-        Node* aux = first(list);
-        while (aux) {
-            if (!visited[aux->i][aux->j]) { // Verificar si el nodo no ha sido visitado
-                push(s, aux);
-                visited[aux->i][aux->j] = 1; // Marcar el nodo como visitado
-            }
-            aux = next(list);
-        }
-    }
-    return NULL;
+   Stack* s = createStack();
+   push(s, initial);
+
+   while (!is_empty(s)) {
+      Node* current = top(s);
+      pop(s);
+
+      if (is_final(current)) {
+         return current;
+      }
+
+      List* adj = get_adj_nodes(current);
+      Node* adjNode = first(adj);
+
+      while (adjNode != NULL) {
+         push(s, adjNode);
+         adjNode = next(adj);
+      }
+      *cont++;
+      freeList(adj);
+   }
+   return NULL;
 }
 
 /*

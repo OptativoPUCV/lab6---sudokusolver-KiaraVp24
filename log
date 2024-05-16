@@ -116,3 +116,18 @@ sudoku.c:88:9: error: variable ‘visited’ set but not used [-Werror=unused-bu
 cc1: all warnings being treated as errors
 Compilation failed
 b0106d5
+Thu 16 May 2024 08:56:59 PM UTC: 
+ sudoku.c | 27 ++++++++++++++-------------
+ 1 file changed, 14 insertions(+), 13 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:105:7: error: value computed is not used [-Werror=unused-value]
+  105 |       *cont++;
+      |       ^~~~~~~
+sudoku.c:106:7: error: implicit declaration of function ‘freeList’; did you mean ‘createList’? [-Werror=implicit-function-declaration]
+  106 |       freeList(adj);
+      |       ^~~~~~~~
+      |       createList
+cc1: all warnings being treated as errors
+Compilation failed
+c3c05b7
